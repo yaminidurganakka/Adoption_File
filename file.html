@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Sacrifice Adoption</title>
+    <style>
+        body {
+
+            background-image: url("image.jpg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            height: 100%;
+            width: 100%;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        #title {
+            color: white;
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        #quoteContainer {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .quote {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 15px;
+            padding: 20px;
+            max-width: 300px;
+            width: 100%;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+
+        .quote.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        #quoteText {
+            font-style: italic;
+            color: #555;
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+
+        .highlight {
+            color: #4CAF50;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="title">Love Sacrifice Adoption</div>
+
+    <div id="quoteContainer">
+        <div class="quote active">
+            <p id="quoteText">"In the world of <span class="highlight">adoption</span>, <span
+                    class="highlight">love</span> knows no boundaries. It's a journey of the heart, where connections
+                are made and families are built."</p>
+        </div>
+        <div class="quote">
+            <p id="quoteText">"Choosing <span class="highlight">adoption</span>"Adopting a daughter or son is like
+                adding a melody to the symphony of family – sweet, harmonious, and beautifully unique."<span
+                    class="highlight">love</span>."</p>
+        </div>
+        <div class="quote">
+            <p id="quoteText">"<span class="highlight">Adopting</span> the world may not change if you adopt a child,
+                but for that child their world will change."</p>
+        </div>
+        <div class="quote">
+            <p id="quoteText">"<span class="highlight">Adopting</span> little souls find their way to you, whether they
+                are from your womb or someone else's."</p>
+        </div>
+        <div class="quote">
+            <p id="quoteText">"<span class="highlight">Adopting</span> "Adoption is not just about giving a home; it's
+                about giving a future filled with love, laughter, and endless possibilities."</p>
+        </div>
+        <div class="quote">
+            <p id="quoteText">"<span class="highlight">Adopting</span> "Open your heart, open your home. Through
+                adoption, you'll discover the extraordinary joy of creating a forever family."</p>
+        </div>
+        <div class="quote">
+            <p id="quoteText">"<span class="highlight">"Adoption is not about finding children for families, its about
+                    finding familiess for children."</p>
+        </div>
+        <div class="quote">
+            <p id="quoteText">"<span class="highlight">Adopting</span> Being a parent wasn't just about bearing a
+                child.It was about bearing witness to its life."</p>
+        </div>
+    </div>
+
+    <script>
+        const quotes = document.querySelectorAll('.quote');
+        let currentQuoteIndex = 0;
+
+        function showNextQuote() {
+            quotes[currentQuoteIndex].classList.remove('active');
+            currentQuoteIndex = (currentQuoteIndex + 1) % quotes.length;
+            quotes[currentQuoteIndex].classList.add('active');
+        }
+
+        setInterval(showNextQuote, 3000); // Change quote every 3 seconds
+    </script>
+
+</body>
+
+</html>
